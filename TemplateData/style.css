@@ -14,3 +14,17 @@ body { padding: 0; margin: 0 }
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+button {
+    background: none;
+    /* Removes the background */
+    border: none;
+    /* Removes the border (optional) */
+    outline: none;
+    /* Removes the focus outline */
+    padding: 0;
+    /* Adjust padding as needed */
+    margin: 0;
+    /* Adjust margin as needed */
+    box-shadow: none;
+    /* Removes any shadow effects */
+}

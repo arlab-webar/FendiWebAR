@@ -148,10 +148,15 @@
   
   <script>
     if (isMobile()) {
-      const screenWidth = window.screen.width;
-      const screenHeight = window.screen.height;
-      console.log('Screen Resolution:' + screenWidth + 'x' + screenHeight);
-      if (screenWidth == 320 || screenHeight == 480) {
+    
+    } else {
+      const urlParams = new URLSearchParams(window.location.search);
+
+    // Extract the "isFeatureEnabled" parameter
+    const isAd = urlParams.get('Ad') === 'true'; 
+      if(isAd)
+    {
+   
         console.log("Ad UI");
         const blacklink = document.getElementById("ARBlackBag");
         const nudelink = document.getElementById("ARNudeBag");
@@ -165,8 +170,8 @@
 
         whitelink.style.width = "14%";
         whitelink.style.left = "66%";
-      }
-    } else {
+    }
+    else{
       // console.log("sss")
       const blacklink = document.getElementById("ARBlackBag");
       const nudelink = document.getElementById("ARNudeBag");
@@ -183,6 +188,7 @@
       whitelink.style.left = "61%";
 
     }
+  }
     window.onload = function () {
       if (window.screen.width > 768||window.screen.width==320) { // Adjust the threshold as needed
         document.body.style.backgroundColor = "#ADD8E6"; // Set desired background color for desktop

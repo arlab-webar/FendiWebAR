@@ -151,7 +151,7 @@
     
     } else {
       const urlParams = new URLSearchParams(window.location.search);
-
+      console.log(urlParams);
     // Extract the "isFeatureEnabled" parameter
     const isAd = urlParams.get('Ad') === 'true'; 
       if(isAd)
